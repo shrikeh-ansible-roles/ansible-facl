@@ -1,0 +1,4 @@
+---
+- name: Include the installation for various OSes
+  include: install.yml
+...
