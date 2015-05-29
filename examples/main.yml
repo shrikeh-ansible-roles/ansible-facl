@@ -1,5 +1,0 @@
----
-setfacl_actions:
-  - options: '-d -RLm'
-
-...

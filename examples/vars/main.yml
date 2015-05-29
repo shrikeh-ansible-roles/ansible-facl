@@ -1,0 +1,12 @@
+---
+setfacl_actions:
+  - options: '-d -RLm'
+    type: g
+    name: 'admin'
+    target: '/tmp/foo'
+
+
+setfacl_files:
+  - file: 'files/example.acl'
+  - target: '/tmp/bar'
+...
