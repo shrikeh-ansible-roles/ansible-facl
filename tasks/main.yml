@@ -1,4 +1,17 @@
 ---
 - name: Include the installation for various OSes
   include: install.yml
+
+- name: Set up ACLs for files and folders
+  command: |
+    {{ setfacl_command_path }} {{ item.options | omit }} {{ item.type }}:{{ item.name }}:{{ item.permissions }} {{ item.target }}
+  with_items: setfacl_actions
+  when:       setfacl_actions is defined
+
+- name: Set up ACLs based on an input file
+  command: |
+    {{ setfacl_command_path }} {{ item.options | omit }} -M {{ item.file }} {{ item.target }}
+  with_items: setfacl_files
+  when:       setfacl_files is defined
+  
 ...
