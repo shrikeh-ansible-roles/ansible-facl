@@ -1,21 +1,32 @@
+%YAML 1.2
 ---
 - name:     Install facl via apt
-  apt:      name=acl state=present
+  apt:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
   when:     ansible_pkg_mgr == 'apt'
 
 - name:     Install facl via yum
-  yum:      name=acl state=present
+  yum:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
   when:     ansible_pkg_mgr == 'yum'
 
 - name:     Install facl via zypper
-  zypper:   name=acl state=present
+  zypper:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
   when:     ansible_pkg_mgr == 'zypper'
 
 - name:     Install facl via pacman
-  pacman:   name=acl state=present
+  pacman:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
   when:     ansible_pkg_mgr == 'pacman'
 
 - name:     Install facl via portage
-  portage:  name=acl state=present
+  portage:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
   when:     ansible_pkg_mgr == 'portage'
 ...
