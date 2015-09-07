@@ -1,18 +1,32 @@
 %YAML 1.2
 ---
-- name: Include the installation for various OSes
-  include: install.yml
+- name:     Install facl via apt
+  apt:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
+  when:     ansible_pkg_mgr == 'apt'
 
-- name: Set up ACLs for files and folders
-  command: |
-    {{ setfacl_command_path }} {{ item.options | default(omit) }} {{ item.type }}:{{ item.name }}:{{ item.permissions }} {{ item.target }}
-  with_items: setfacl_actions
-  when:       setfacl_actions is defined
+- name:     Install facl via yum
+  yum:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
+  when:     ansible_pkg_mgr == 'yum'
 
-- name: Set up ACLs based on an input file
-  command: |
-    {{ setfacl_command_path }} {{ item.options | default(omit) }} -M {{ item.file }} {{ item.target }}
-  with_items: setfacl_files
-  when:       setfacl_files is defined
+- name:     Install facl via zypper
+  zypper:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
+  when:     ansible_pkg_mgr == 'zypper'
 
+- name:     Install facl via pacman
+  pacman:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
+  when:     ansible_pkg_mgr == 'pacman'
+
+- name:     Install facl via portage
+  portage:
+    name: acl
+    state: "{{ 'latest' if facl_pkg_state_latest else 'present' }}"
+  when:     ansible_pkg_mgr == 'portage'
 ...

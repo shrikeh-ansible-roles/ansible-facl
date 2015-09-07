@@ -1,5 +1,4 @@
 %YAML 1.2
 ---
 facl_pkg_state_latest: false
-setfacl_command_path: '/usr/bin/setfacl'
 ...
