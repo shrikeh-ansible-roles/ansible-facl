@@ -1,4 +1,3 @@
-%YAML 1.2
 ---
 - name:     Install facl via apt
   apt:
