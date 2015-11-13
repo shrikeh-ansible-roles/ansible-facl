@@ -1,4 +1,7 @@
 # Ansible FACL installer
+[![Ansible Role](https://img.shields.io/ansible/role/3973.svg)](https://galaxy.ansible.com/detail#/role/3973)
+[![Build Status](https://travis-ci.org/shrikeh/ansible-facl.svg)](https://travis-ci.org/shrikeh/ansible-facl)
+
 Role to install [FACL][facl] on multiple *nix-based OSes.
 
 ## Role Variables
@@ -14,9 +17,10 @@ Whether to use the latest version of the package or just ensure it is present.
 ---
 
 ```YAML
-%YAML 1.2
 ---
 - hosts: production
+  vars:
+    facl_pkg_state_latest: no
   roles:
     - { role: shrikeh.facl }
 ...
