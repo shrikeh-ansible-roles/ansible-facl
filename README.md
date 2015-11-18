@@ -1,7 +1,7 @@
 # Ansible FACL installer
 [![Ansible Role](https://img.shields.io/ansible/role/3973.svg)](https://galaxy.ansible.com/detail#/role/3973)
-[![Build Status](https://travis-ci.org/shrikeh/ansible-facl.svg)](https://travis-ci.org/shrikeh/ansible-facl)
-[![GitHub Stars](https://img.shields.io/github/stars/shrikeh/ansible-facl.svg)][github]
+[![Build Status](https://travis-ci.org/shrikeh-ansible-roles/ansible-facl.svg)](https://travis-ci.org/shrikeh-ansible-roles/ansible-facl)
+[![GitHub Stars](https://img.shields.io/github/stars/shrikeh-ansible-roles/ansible-facl.svg)][github]
 
 Role to install [FACL][facl] on multiple *nix-based OSes.
 
