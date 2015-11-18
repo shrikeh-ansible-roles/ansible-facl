@@ -37,7 +37,7 @@ Whether to use the latest version of the package or just ensure it is present.
 Contact me on Twitter @[barney_hanlon][twitter]
 
 [facl]: https://help.ubuntu.com/community/FilePermissionsACLs
-[facl_pkg_state_latest]: https://github.com/shrikeh/ansible-facl/blob/master/defaults/main.yml#L3
-[licence]: https://raw.githubusercontent.com/shrikeh/ansible-jumpcloud/master/LICENSE
+[facl_pkg_state_latest]: https://github.com/shrikeh-ansible-roles/ansible-facl/blob/master/defaults/main.yml#L3
+[licence]: https://raw.githubusercontent.com/shrikeh-ansible-roles/ansible-jumpcloud/master/LICENSE
 [twitter]: https://twitter.com/barney_hanlon "Link to my Twitter page"
-[github]: https://github.com/shrikeh/ansible-curl "facl role on Github"
+[github]: https://github.com/shrikeh-ansible-roles/ansible-curl "facl role on Github"
